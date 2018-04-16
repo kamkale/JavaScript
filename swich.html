@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>swich steatment</title>
+</head>
+<script type="text/javascript"></script>
+<body>
+<p id="test"></p>
+<script>
+	var day;
+switch(new Date().getDay())
+{
+	case 1:
+          day="monday";
+    break;
+    case 2:
+          day="tuesday";
+    break;
+    case 3:
+          day="wensday";
+    break;
+    case 5:
+          day="thuseday";
+    break;
+    case 6:
+          day="firday";
+    break;
+    case 7:
+          day="shaturday";
+    break;
+    case 0:
+          day="sunday";
+    break;
+          
+}
+document.getElementById("test").innerHtml ="it is"+day;
+</script>
+</body>
+</html>

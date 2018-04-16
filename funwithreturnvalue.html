@@ -1,0 +1,29 @@
+
+<html>
+	<head>
+		<title>
+			Functions with Return values
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var firstVal, secondVal;
+			function readValues() {
+				firstVal = prompt("Enter first value");
+				secondVal = prompt("Enter second value");
+
+				firstVal = parseInt(firstVal);
+				secondVal = parseInt(secondVal);
+				var result = addValues();
+				console.log("the sum is " + result);	
+			}
+
+			function addValues() {
+				var result = firstVal + secondVal;
+				return result;
+			}
+			readValues();
+			
+		</script>
+	</body>
+</html>

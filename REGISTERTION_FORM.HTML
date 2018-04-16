@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <title>
+        Demonstrating reading and validating data of input elements.
+    </title>
+    <style type="text/css">
+        li {
+            padding: 7px;
+            margin: 7px;
+            list-style: none;
+        }
+        
+        .container {
+            width: 500px;
+            height: 400px;
+            border: 2px solid gray;
+            position: absolute;
+            left: 400px;
+            margin-top: 100px;
+            background-color: lightgrey;
+            overflow: scroll;
+        }
+        
+        .error {
+            color: orangered;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>
+                <div class="label">Enter you Name</div>
+                <div class="element">
+                    <input type="text" name="username" id="uname">
+                </div>
+            </li>
+            <li>
+                <div class="label">Enter Password</div>
+                <div class="element">
+                    <input type="password" name="password" id="upwd">
+                </div>
+            </li>
+            <li>
+                <div class="label">Enter conform Password</div>
+                <div class="element">
+                    <input type="password" name="conform" id="ucpwd">
+                    <div class="error">Pwd is not matching</div>
+                </div>
+            </li>
+            <li>
+                <div class="label">select your city</div>
+                <div class="element">
+                    <select id="ucountry">
+                            <option>india</option>
+                            <option>chaina</option>
+                            <option>uk</option>
+                        </select>
+                </div>
+            </li>
+
+            <li>
+                <div class="label">Enter you Self</div>
+                <div class="element">
+                    <textarea id="uself"></textarea>
+                </div>
+            </li>
+            <li>
+                <input type="button" value="Register" onclick="readdata()">
+            </li>
+        </ul>
+    </div>
+    <script>
+        var userdata = {};
+
+        function readdata() {
+            userdata.uname = document.querySelector("#uname").value;
+            userdata.upwd = document.querySelector("#upwd").value;
+            userdata.ucpwd = document.querySelector("#ucpwd").value;
+
+
+            if (userdata.upwd != userdata.ucpwd) {
+                document.querySelector(".error").style.display = 'block';
+            }
+            userdata.uself = document.querySelector("#uself").value;
+            var index = document.querySelector("#ucountry").selectedIndex;
+            console.log(index);
+
+            var availableOptions = document.querySelector("#ucountry").options;
+            userdata.country = availableOptions[index].text;
+
+            console.log(userdata)
+        }
+    </script>
+</body>
+
+</html>

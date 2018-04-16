@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>swith steatment</title>
+</head>
+<body>
+	<script type="text/javascript">
+  
+    var text;
+    switch(new Date().getDay())
+    {
+      default:
+             text="looking frwd wich day today"
+      break;
+      case 6:
+             text="today is shaturday"
+      break;
+      case 0:
+            text="today is sunday"
+               
+
+    }  
+    document.getElementsByTagName("para").innerHtml=text;
+          
+	</script>
+<P id="para"></P>
+</body>
+</html>

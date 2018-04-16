@@ -1,0 +1,23 @@
+
+<html>
+	<head>
+		<title>
+			Demonstrating Local and Global Variables
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var a = 10;
+
+			function display() {
+				var b = 30;
+				console.log("Inside function " + a);
+				console.log("Inside function " + b);
+			}
+
+			display();
+			console.log("outside function " + a);
+			console.log("outside  b function " + b);
+		</script>
+	</body>
+</html>

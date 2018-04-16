@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>
+        Demonstrating inheritance btwn two static objects.
+    </title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var sellerInfo = {
+            sellerName: 'Indian Electronics',
+            sellerRating: '4/5',
+            sellerLocation: 'New Delhi'
+        };
+        var productDetails1 = {
+            name: "laptop",
+            price: 300,
+            manufacturer: 'Samsung',
+            imageUrl: 'images/product1.png',
+            displayProdDetails: function() {
+                console.log("Product Name - " + this.name);
+                console.log("Product Price - " + productDetails1.price);
+                console.log("Product Manufacturer - " + this.manufacturer);
+                console.log("Product Image - " + this.imageUrl);
+                console.log("---- Seller Information- ----");
+                console.log("Seller name - " + this.sellerName);
+                console.log("Seller Rating - " + this.sellerRating);
+                console.log("Seller Loction - " + this.sellerLocation);
+            }
+        };
+
+
+        var productDetails2 = {
+            name: "Mobile",
+            price: 200,
+            manufacturer: 'HTC',
+            imageUrl: 'images/prod2.png',
+            displayProdDetails: function() {
+                console.log("Product Name - " + this.name);
+                console.log("Product Price - " + productDetails2.price);
+                console.log("Product Manufacturer - " + this.manufacturer);
+                console.log("Product Image - " + this.imageUrl);
+                console.log("---- Seller Information- ----");
+                console.log("Seller name - " + this.sellerName);
+                console.log("Seller Rating - " + this.sellerRating);
+                console.log("Seller Loction - " + this.sellerLocation);
+            }
+        };
+
+        console.log(productDetails1);
+
+        productDetails1.__proto__ = sellerInfo;
+        productDetails2.__proto__ = sellerInfo;
+
+        productDetails1.displayProdDetails();
+        productDetails2.displayProdDetails();
+    </script>
+</body>
+
+</html>

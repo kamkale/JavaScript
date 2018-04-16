@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>
+        Demonstrating user input validations
+    </title>
+    <style type="text/css">
+        .block {
+            border: 2px solid;
+            background: #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        li {
+            list-style: none;
+            margin: 10px;
+            border: 1px solid;
+            padding: 10px;
+        }
+        
+        .resultContainer {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block">
+        <ul>
+            <li>
+                Enter first value: <input type="text" id="fVal" onkeypress="return validateData(event);">
+            </li>
+            <li>
+                Enter second value: <input type="text" id="sVal" onkeypress="return validateData(event);">
+            </li>
+            <li class="resultContainer">
+                Result: The sum of Two numbers is :<span id="rBlock"></span>
+            </li>
+            <li>
+                <input type="button" value="Add Values" onclick="doCalculation();">
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        function doCalculation() {
+            var firstVal = document.querySelector("#fVal").value;
+            firstVal = parseInt(firstVal);
+            var secondVal = document.querySelector("#sVal").value;
+            secondVal = parseInt(secondVal);
+            var result = firstVal + secondVal;
+            document.querySelector("#rBlock").innerHTML = "<b>" + result + "</b>";
+
+            document.querySelector(".resultContainer").style.display = 'block';
+        }
+
+        function validateData(event) {
+            console.log(event);
+            if (event.charCode >= 97 && event.charCode <= 122) {
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>

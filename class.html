@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demostretion define the class in js</title>
+	<script type="text/javascript"></script>
+</head>
+<body>
+<script>
+		function Student(obj) 
+		{
+			this.name=obj.name;
+			this.age=obj.age;
+			this.adress=obj.adress;
+
+		this. Studentdisplay=function()
+		{
+			console.log("studen Name:"+this.name);
+			console.log("studen age:"+this.age);
+			console.log("studen adress:"+this.adress);
+
+		}
+	}
+		 var studen1=new Student({name:"kamlesh",age:25,adress:"pune"});
+		 console.log(studen1);
+
+</script>
+</body>
+</html>

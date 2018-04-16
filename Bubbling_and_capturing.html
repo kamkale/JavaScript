@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>
+        Bubbling_and_Capturing
+    </title>
+    <style type="text/css">
+        #pcontainer {
+            border: 2px;
+            text-align: center;
+            width: 400px;
+            height: 200px;
+            background-color: aqua;
+            color: blue;
+        }
+        
+        #childcontainer {
+            border: 2px;
+            text-align: center;
+            width: 180px;
+            height: 100px;
+            background-color: brown;
+            color: blue;
+            margin: 5px;
+            padding: 5px;
+            position: absolute;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<script type="text/javascript"></script>
+
+<body>
+    <div name="buble" id="pcontainer">
+        <h2>parent container</h2>
+        <div name="capt" id="childcontainer">
+            <h2>child container</h2>
+        </div>
+    </div>
+    <script>
+        var childclick = 0;
+        document.getElementById("pcontainer").addEventListener("click", function() {
+            console.log("parent container click");
+
+        }, false);
+        document.getElementById("childcontainer").addEventListener("click", function() {
+            console.log("child container click");
+        }, false);
+    </script>
+
+</body>
+
+</html>

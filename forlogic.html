@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>for loop Statment print 1 to 100 prime no</title>
+</head>
+<body>
+<script>
+	
+	for (i =1; i<=100; i++) 
+	{
+		var n=i;
+		 var temp=0;
+	 for(j=1;j<=n;j++)
+	 {
+	 	if(n%j==0)
+	 	{
+	 		temp++;
+	 	}
+	 	if(temp>2)
+	 	{
+	 		break;
+	 	}
+	 	if(temp==2)
+	 	{
+	 	  document.write( "prime no" + "</br>" + i);
+	 	}
+	 }	
+		
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> creating object</title>
+</head>
+<body>
+<script type="text/javascript">  
+	function person(name,age) 
+	{
+		this.name=name;
+		this.age=age;
+	}
+	var person1= new person("kamlesh",24);//person1 is object person
+	var person2=new person("akash",20);
+	document.write(person1.name+"<br/>"+person1.age+"<br/>");
+	document.write(person2.name+"<br/>"+person2.age);
+</script>
+</body>
+</html>
